@@ -1,0 +1,7 @@
+package leetcode.java;
+
+public class ValidPerfectSquare {
+       public boolean isPerfectSquare(int num) {
+        return Math.sqrt(num) - (int)Math.sqrt(num) == 0;
+    }
+}

@@ -1,0 +1,15 @@
+package leetcode.java;
+
+public class MatrixDiagonalSum {
+        public int diagonalSum(int[][] mat) {
+        int sum = 0;
+        for( int i = 0 ; i < mat.length; i ++){
+          for( int  j = 0; j < mat[i].length ; j++){
+            if(i==j || i == mat.length - 1 - j){
+              sum = sum + mat[i][j];
+            }
+          }
+        }
+        return sum;
+    }
+}

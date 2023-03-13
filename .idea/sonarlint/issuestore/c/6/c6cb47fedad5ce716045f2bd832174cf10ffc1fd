@@ -1,0 +1,7 @@
+
+r
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÑÖÙƒıÿÿÿÿ8ÙœÏàí0
+T
+java:S1854"7Remove this useless assignment to local variable "arr".(¨Òäµ8ÓŞÎàí0
+E
+java:S1481"(Remove this unused "arr" local variable.(¨Òäµ8ŞŞÎàí0
