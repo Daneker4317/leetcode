@@ -377,5 +377,3 @@ h
 8src/leetcode/java/FindGreatestCommonDivisoroofArray.java,4\b\4baa695ff9ed48219010dfaaa46216cf676e6541
 T
 $src/leetcode/java/ThreeDivisors.java,a\b\ab3dba2854137f03473c616ad38e94c793e02560
-Z
-*src/leetcode/java/RunningSumof1dArray.java,4\4\44cd108e6b16151a9ff9bdc8ff723f04a2a06d9c
