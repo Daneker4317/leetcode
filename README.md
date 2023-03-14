@@ -1,2 +1,2 @@
 # leetcode
-link to my Leetcode account : https://leetcode.com/youngAndMad/
+link: https://leetcode.com/youngAndMad/
