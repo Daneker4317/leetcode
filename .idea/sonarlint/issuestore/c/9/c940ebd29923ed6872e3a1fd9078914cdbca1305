@@ -1,0 +1,4 @@
+
+ujavascript:S3776"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(έƒƒ―ϊÿÿÿÿ
+Ujavascript:S1481"9Remove the declaration of the unused 'stackTop' variable.(ι¬τω
+Rjavascript:S1854"6Remove this useless assignment to variable "stackTop".(ι¬τω
