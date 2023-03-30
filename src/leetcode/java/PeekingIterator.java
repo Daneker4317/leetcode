@@ -1,3 +1,7 @@
+package leetcode.java;
+
+import java.util.*;
+
 class PeekingIterator implements Iterator<Integer> {
 
 	Queue<Integer> queue;
