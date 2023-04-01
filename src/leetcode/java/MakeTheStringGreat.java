@@ -20,7 +20,4 @@ public class MakeTheStringGreat {
         stack.forEach(sb::append);
         return sb.toString();
     }
-    public boolean check(String str , int index){
-        return Math.abs(str.charAt(index) - str.charAt(index-1)) == 32;
-    }
 }
