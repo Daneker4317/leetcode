@@ -1,4 +1,4 @@
-package leetcode.cpp;
+
 class RotateImage
 {
 public:

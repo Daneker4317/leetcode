@@ -3,7 +3,7 @@ package leetcode.java;
 import leetcode.utils.ListNode;
 
 public class ReverseLinkedList {
-        public ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
       ListNode prev = null;
       while(head!=null){
           ListNode nextNode = head.next;
