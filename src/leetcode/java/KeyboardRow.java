@@ -6,7 +6,7 @@ public class KeyboardRow {
         public String[] findWords(String[] words) {
         List<String> list = new ArrayList<>();
         for(String str : words){
-          if(check(str.toLowerCase())){
+            if(check(str.toLowerCase())){
             list.add(str);
           }
         }
@@ -44,9 +44,6 @@ public class KeyboardRow {
       return true;
     }
     public boolean check(String res){
-      if(first(res))return true;
-      if(second(res))return true;
-      if(third(res))return true;
-      return false;
+        return first(res) || second(res) || third(res);
     }
 }

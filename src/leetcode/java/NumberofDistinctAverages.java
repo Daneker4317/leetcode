@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class NumberofDistinctAverages {
         public int distinctAverages(int[] nums) {
-        Set<Double> set = new HashSet();
+        Set<Double> set = new HashSet<>();
         Arrays.sort(nums);
         int i = 0;
         int j = nums.length - 1;
