@@ -13,10 +13,9 @@ public class SortCharactersByFrequency {
         new HashMap<Character, Integer>() {{
             for (char ch : s.toCharArray())
                 compute(ch, (k, v) -> (v == null) ? 1 : ++v);
-            this.entrySet().stream()
+            entrySet().stream()
                     .sorted(Collections.reverseOrder
-                            (Map.Entry.comparingByValue())
-                    )
+                            (Map.Entry.comparingByValue()))
                     .forEach(entry -> {
                         int c = 0;
                         while (c < entry.getValue()) {
