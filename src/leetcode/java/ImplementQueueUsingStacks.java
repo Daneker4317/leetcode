@@ -5,25 +5,26 @@ import java.util.LinkedList;
 public class ImplementQueueUsingStacks {
     class MyQueue {
 
-    private LinkedList<Integer> list;
-    public MyQueue() {
-        this.list = new LinkedList<>();
-    }
+        private LinkedList<Integer> list;
 
-    public void push(int x) {
-        list.add(x);
-    }
+        public MyQueue() {
+            this.list = new LinkedList<>();
+        }
 
-    public int pop() {
-        return list.pop();
-    }
+        public void push(int x) {
+            list.add(x);
+        }
 
-    public int peek() {
-        return list.peek();
-    }
+        public int pop() {
+            return list.pop();
+        }
 
-    public boolean empty() {
-        return list.isEmpty();
+        public int peek() {
+            return list.peek();
+        }
+
+        public boolean empty() {
+            return list.isEmpty();
+        }
     }
-}
 }

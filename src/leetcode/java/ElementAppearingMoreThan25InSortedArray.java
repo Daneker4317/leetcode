@@ -1,16 +1,20 @@
 package leetcode.java;
 
 public class ElementAppearingMoreThan25InSortedArray {
-        public int findSpecialInteger(int[] arr) {
-        int res = arr.length/4+1;
-        if(arr.length==1)return arr[0];
-        for(int i=0;i<arr.length;i++){
-            for(int j=1;j<arr.length;j++){
-                if(arr[i]==arr[j]){
+    public int findSpecialInteger(int[] arr) {
+        if (arr.length == 1) {
+            return arr[0];
+        }
+        int res = arr.length / 4 + 1;
+        for (int k : arr) {
+            for (int j = 1; j < arr.length; j++) {
+                if (k == arr[j]) {
                     res--;
-                    if(res<=0)return arr[i];
-                }else{
-                    res = arr.length/4+1;
+                    if (res <= 0) {
+                        return k;
+                    }
+                } else {
+                    res = arr.length / 4 + 1;
                 }
             }
         }

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class EmployeeImportance {
 
-    class Employee{
+    static class Employee {
         public int id;
         public int importance;
         public List<Integer> subordinates;
@@ -14,21 +14,21 @@ public class EmployeeImportance {
 
     public int getImportance(List<Employee> employees, int id) {
         Employee e = employees.stream().filter(employee -> employee.id == id).findFirst().orElseThrow();
-        empImportanceSum(employees,e);
+        empImportanceSum(employees, e);
         return importanceSum;
     }
 
-    Employee getById(List<Employee> list ,  int id){
+    Employee getById(List<Employee> list, int id) {
         return list.stream().filter(e -> e.id == id)
                 .findFirst().orElseThrow();
     }
 
-    void empImportanceSum( List<Employee> employees,Employee e){
-        importanceSum+= e.importance;
-        if (e.subordinates.isEmpty()){
+    void empImportanceSum(List<Employee> employees, Employee e) {
+        importanceSum += e.importance;
+        if (e.subordinates.isEmpty()) {
             return;
         }
-        e.subordinates.forEach(id ->empImportanceSum(employees,getById(employees,id)));
+        e.subordinates.forEach(id -> empImportanceSum(employees, getById(employees, id)));
     }
 
 }

@@ -1,17 +1,13 @@
 package leetcode.java;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.function.Function;
 
 public class DistributeCandies {
-        public int distributeCandies(int[] candyType) {
-        if(types(candyType)==1)return 1;
-        return Math.min(candyType.length / 2, types(candyType));
+    public int distributeCandies(int[] candyType) {
+        return types.apply(candyType) == 1 ? 1 : Math.min(candyType.length / 2, types.apply(candyType));
     }
-    public int types(int [] a){
-        Set<Integer> list = new HashSet<>();
-        for(int key : a){
-          list.add(key);
-        }
-        return list.size();
-    }
+
+    private final Function<int[], Integer> types =
+            a -> (int) Arrays.stream(a).distinct().count();
 }

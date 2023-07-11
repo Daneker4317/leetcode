@@ -10,16 +10,18 @@ public class Fibonacci {
         int n = in.nextInt();
         System.out.println(fib(n));
     }
-    static Map<Integer , Integer> map = new HashMap<>(){{
-        put(0,0);
-        put(1,1);
+
+    static Map<Integer, Integer> map = new HashMap<>() {{
+        put(0, 0);
+        put(1, 1);
     }};
-    public static int fib(int n){
-        if (n <=1){
+
+    public static int fib(int n) {
+        if (n <= 1) {
             return n;
         }
         for (int i = 2; i <= n; i++) {
-            map.put(i , map.get(i-2) + map.get(i-1));
+            map.put(i, map.get(i - 2) + map.get(i - 1));
         }
         return map.get(n);
     }

@@ -18,8 +18,6 @@ public class CellsinaRangeonanExcelSheet {
       String beg = s.substring(0,1);
       String en = s.substring(3,4);
 
-
-
       for(int i=str.indexOf(beg);i<=str.indexOf(en);i++){
         for(int j = start;j<=end;j++){
           list.add(convert(String.valueOf(str.charAt(i)),j));
@@ -31,6 +29,6 @@ public class CellsinaRangeonanExcelSheet {
     }
 
     public String convert(String s , int digit){
-      return s+String.valueOf(digit);
+      return s.concat(String.valueOf(digit));
     }
 }

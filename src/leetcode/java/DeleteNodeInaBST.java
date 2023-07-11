@@ -1,50 +1,39 @@
 package leetcode.java;
 
 public class DeleteNodeInaBST {
-  public class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
- }
+    class Solution {
+        public TreeNode deleteNode(TreeNode root, int key) {
+            root = deleteRecursive(root, key);
+            return root;
+        }
 
-class Solution {
-    public TreeNode deleteNode(TreeNode root, int key) {
-         root = deleteRecursive(root , key);
-         return root;
-    }
-    private TreeNode deleteRecursive(TreeNode root, int key) {
-        if ( root == null ) {
-            return null;
-        }
-        if (key < root.val){
-            root.left = deleteRecursive(root.left , key);
-        }else if (key > root.val){
-            root.right = deleteRecursive(root.right , key);
-        }else {
-            if (root.left == null){
-                return root.right;
-            } else if (root.right == null) {
-                return root.left;
+        private TreeNode deleteRecursive(TreeNode root, int key) {
+            if (root == null) {
+                return null;
             }
-            root.val = minValue(root.right);
-            root.right = deleteRecursive(root.right , root.val);
+            if (key < root.val) {
+                root.left = deleteRecursive(root.left, key);
+            } else if (key > root.val) {
+                root.right = deleteRecursive(root.right, key);
+            } else {
+                if (root.left == null) {
+                    return root.right;
+                } else if (root.right == null) {
+                    return root.left;
+                }
+                root.val = minValue(root.right);
+                root.right = deleteRecursive(root.right, root.val);
+            }
+            return root;
         }
-        return root;
+
+        private int minValue(TreeNode root) {
+            int min = root.val;
+            while (root.left != null) {
+                min = root.left.val;
+                root = root.left;
+            }
+            return min;
+        }
     }
-    private int minValue(TreeNode root){
-       int min = root.val;
-       while (root.left!=null){
-           min = root.left.val;
-           root = root.left;
-       }
-       return min;
-    }
-}
 }

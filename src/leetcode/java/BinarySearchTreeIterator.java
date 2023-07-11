@@ -42,7 +42,9 @@ public class BinarySearchTreeIterator {
         }
 
         public void addAll(TreeNode root) {
-            if (root == null) {return;}
+            if (root == null) {
+                return;
+            }
             addAll(root.left);
             queue.add(root.val);
             addAll(root.right);
