@@ -1,0 +1,11 @@
+package leetcode.java;
+
+import java.time.LocalDate;
+
+public class DayOfTheWeek {
+    public String dayOfTheWeek(int day, int month, int year) {
+        LocalDate date = LocalDate.of(year,month,day);
+        String name = date.getDayOfWeek().name();
+        return String.valueOf(name.charAt(0)).concat(name.substring(1).toLowerCase());
+    }
+}
