@@ -2,14 +2,15 @@ package leetcode.java;
 
 import java.util.*;
 
-public class SumInAMatrix {
-
+public class ConvertTo2DArrayWithConditions {
     boolean[] visited;
     List<List<Integer>> list;
 
     public List<List<Integer>> findMatrix(int[] nums) {
         list = new ArrayList<>();
         visited = new boolean[nums.length];
+
+        distinct(nums);
 
         return list;
     }
@@ -21,7 +22,8 @@ public class SumInAMatrix {
         boolean isFinished = true;
         for (int i = 0; i < arr.length; i++) {
             if (!visited[i] && !set.contains(arr[i])) {
-                set.add(i);
+                set.add(arr[i]);
+                visited[i] = true;
                 isFinished = false;
             }
         }
